@@ -1,0 +1,14 @@
+{
+  "name": "atom-one-light",
+  "version": "1.0.0",
+  "author": "namnkahn1607",
+  "description": "A personal light color theme, inspired by Zed Industries's One Light.",
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15"
+  }
+}
