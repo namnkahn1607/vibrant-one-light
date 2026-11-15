@@ -67,17 +67,17 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'editor.active_wrap_guide': ['black', 0x1a],
 
     // Scrollbar
-    'scrollbar.thumb.background': ['black', 0x70],
-    'scrollbar.thumb.hover_background': ['black', 0x60],
+    'scrollbar.thumb.background': ['black', 0x38],
+    'scrollbar.thumb.hover_background': ['black', 0x28],
     'scrollbar.thumb.border': ['transparent', 0x00],
     'scrollbar.track.background': ['transparent', 0x00],
     'scrollbar.track.border': ['transparent', 0x00],
 
     // Search & highlights
-    'search.active_match_background': ['bright_blue', 0x66],
-    'search.match_background': ['bright_blue', 0x33],
-    'editor.document_highlight.read_background': ['bright_blue', 0x33],
-    'editor.document_highlight.write_background': ['bright_blue', 0x33],
+    'search.active_match_background': ['bright_blue', 0x33],
+    'search.match_background': ['bright_blue', 0x1a],
+    'editor.document_highlight.read_background': ['bright_blue', 0x1a],
+    'editor.document_highlight.write_background': ['bright_blue', 0x1a],
 
     // Elements & ghost elements
     'element.background': 'medium_pale',
