@@ -1,4 +1,4 @@
-import { resolve, toZed } from './color';
+import { KEEP_UPSTREAM, resolve, toZed, type KeepUpstream } from './color';
 import { base } from './palette/base';
 import { interfacePalette } from './palette/interface';
 import { syntaxPalette } from './palette/syntax';
@@ -43,20 +43,20 @@ export function BuildTheme(upstream: ZedThemeFamily): BuildResult {
     const style = theme.themes[0]!.style;
 
     // 1. chrome: every key has exactly one owner
-    const chrome = new Map<string, string>();
-    const own = (key: string, value: string, owner: string) => {
+    const chrome = new Map<string, string | KeepUpstream>();
+    const own = (key: string, value: string | KeepUpstream, owner: string) => {
         if (chrome.has(key)) throw new Error(`chrome key "${key}" set twice (last by ${owner})`);
         if (!(key in style) || NON_CHROME.has(key)) throw new Error(`unknown chrome key "${key}" (${owner})`);
         chrome.set(key, value);
     };
     for (const [key, b] of Object.entries(interfaceRoles)) {
-        own(key, resolve(interfacePalette, b), 'interface');
+        own(key, b === KEEP_UPSTREAM ? KEEP_UPSTREAM : resolve(interfacePalette, b), 'interface');
     }
     for (const [key, hue] of Object.entries(syntaxOwnedChrome)) {
-        own(key, resolve(syntaxPalette, hue), 'syntax');
+        own(key, hue === KEEP_UPSTREAM ? KEEP_UPSTREAM : resolve(syntaxPalette, hue), 'syntax');
     }
     for (const [key, value] of chrome) {
-        style[key] = value;
+        if (value !== KEEP_UPSTREAM) style[key] = value;
     }
 
     // 2. syntax: replace the whole entry, so no upstream italic/weight leaks through

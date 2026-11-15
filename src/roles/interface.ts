@@ -1,4 +1,4 @@
-import type { Binding } from '../color';
+import { KEEP_UPSTREAM, type Binding, type KeepUpstream } from '../color';
 import type { InterfaceColor } from '../palette/interface';
 
 type B = Binding<InterfaceColor>;
@@ -8,7 +8,7 @@ const error = { fg: 'salmon', bg: 'pale_salmon', border: 'soft_salmon' } as cons
 const info = { fg: 'light_blue', bg: 'pale_blue', border: 'soft_blue' } as const;
 
 /** Keys are validated against the upstream JSON at build time (Zed ignores unknown keys silently). */
-export const interfaceRoles: Readonly<Record<string, B>> = {
+export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     // Surfaces
     'editor.background': 'light_pale',
     'terminal.background': 'light_pale',
@@ -59,4 +59,6 @@ export const interfaceRoles: Readonly<Record<string, B>> = {
     'version_control.added': success.fg,
     'version_control.modified': info.fg,
     'version_control.deleted': error.fg,
+    'version_control.word_added': KEEP_UPSTREAM,
+    'version_control.word_deleted': KEEP_UPSTREAM,
 };

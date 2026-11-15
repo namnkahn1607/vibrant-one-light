@@ -16,6 +16,10 @@ if (process.argv.includes('--check')) {
         process.exit(1);
     }
     console.log(`${OUT} is up to date`);
+} else if (process.argv.includes('--untouched')) {
+    for (const key of untouchedChrome) {
+        console.log(key);
+    }
 } else {
     mkdirSync(dirname(OUT), { recursive: true });
     writeFileSync(OUT, json);

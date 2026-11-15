@@ -1,3 +1,4 @@
+import { KEEP_UPSTREAM, type KeepUpstream } from '../color';
 import type { SyntaxHue } from '../palette/syntax';
 import type { Capture } from './captures';
 
@@ -74,7 +75,7 @@ export const syntaxRoles: Record<Capture, SyntaxRole> = {
 };
 
 /** Chrome keys owned by the syntax palette: editor foreground and terminal colors. */
-export const syntaxOwnedChrome: Readonly<Record<string, SyntaxHue>> = {
+export const syntaxOwnedChrome: Readonly<Record<string, SyntaxHue | KeepUpstream>> = {
     'editor.foreground': 'black',
 
     // Terminal foregrounds
@@ -85,18 +86,26 @@ export const syntaxOwnedChrome: Readonly<Record<string, SyntaxHue>> = {
     // Terminal ANSI (normal & bright share the same hue; dim_* remain upstream One Light)
     'terminal.ansi.black': 'black',
     'terminal.ansi.bright_black': 'black',
+    'terminal.ansi.dim_black': KEEP_UPSTREAM,
     'terminal.ansi.red': 'coral',
     'terminal.ansi.bright_red': 'coral',
+    'terminal.ansi.dim_red': KEEP_UPSTREAM,
     'terminal.ansi.green': 'green',
     'terminal.ansi.bright_green': 'green',
+    'terminal.ansi.dim_green': KEEP_UPSTREAM,
     'terminal.ansi.yellow': 'amber',
     'terminal.ansi.bright_yellow': 'amber',
+    'terminal.ansi.dim_yellow': KEEP_UPSTREAM,
     'terminal.ansi.blue': 'blue',
     'terminal.ansi.bright_blue': 'blue',
+    'terminal.ansi.dim_blue': KEEP_UPSTREAM,
     'terminal.ansi.magenta': 'purple',
     'terminal.ansi.bright_magenta': 'purple',
+    'terminal.ansi.dim_magenta': KEEP_UPSTREAM,
     'terminal.ansi.cyan': 'cyan',
     'terminal.ansi.bright_cyan': 'cyan',
+    'terminal.ansi.dim_cyan': KEEP_UPSTREAM,
     'terminal.ansi.white': 'dark_gray',
     'terminal.ansi.bright_white': 'dark_gray',
+    'terminal.ansi.dim_white': KEEP_UPSTREAM,
 };
