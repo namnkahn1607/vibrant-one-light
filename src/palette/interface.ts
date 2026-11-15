@@ -19,8 +19,6 @@ export const interfacePalette = Extend(base, {
 
     // ghost_element states
     smoke: '#ececed',
-    haze: '#dfe0e1',
-    ash: '#cfd0d2',
 
     // status: warning / conflict
     light_amber: '#f1ad49',

@@ -26,13 +26,13 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'border': 'dark_pale',
 
     // Text & icon
-    'text': 'ink',
-    'text.muted': 'steel',
+    'text': 'black',
+    'text.muted': 'ink',
     'text.placeholder': 'silver',
     'text.disabled': 'silver',
     'text.accent': 'light_blue',
-    'icon': 'ink',
-    'icon.muted': 'steel',
+    'icon': 'black',
+    'icon.muted': 'ink',
     'icon.disabled': 'silver',
     'icon.placeholder': 'steel',
     'icon.accent': 'light_blue',
@@ -45,9 +45,9 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
 
     // Ghost elements
     'ghost_element.background': ['transparent', 0x00],
-    'ghost_element.hover': 'haze',
-    'ghost_element.active': 'ash',
-    'ghost_element.selected': 'ash',
+    'ghost_element.hover': ['black', 0x0d],
+    'ghost_element.active': ['black', 0x20],
+    'ghost_element.selected': ['black', 0x20],
     'ghost_element.disabled': 'smoke',
 
     // Status
