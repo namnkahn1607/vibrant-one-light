@@ -6,6 +6,12 @@ const warning = { fg: 'light_amber', bg: 'pale_amber', border: 'soft_amber' } as
 const success = { fg: 'lime', bg: 'pale_lime', border: 'soft_lime' } as const;
 const error = { fg: 'salmon', bg: 'pale_salmon', border: 'soft_salmon' } as const;
 const info = { fg: 'light_blue', bg: 'pale_blue', border: 'soft_blue' } as const;
+const interactive = {
+    hover: ['black', 0x0d],
+    active: ['black', 0x20],
+    selected: ['black', 0x20],
+    disabled: 'smoke',
+} as const satisfies Record<string, B>;
 
 /** Keys are validated against the upstream JSON at build time (Zed ignores unknown keys silently). */
 export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
@@ -43,12 +49,17 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'editor.document_highlight.read_background': ['bright_blue', 0x33],
     'editor.document_highlight.write_background': ['bright_blue', 0x33],
 
-    // Ghost elements
+    // Elements & ghost elements
+    'element.background': 'medium_pale',
+    'element.hover': interactive.hover,
+    'element.active': interactive.active,
+    'element.selected': interactive.selected,
+    'element.disabled': interactive.disabled,
     'ghost_element.background': ['transparent', 0x00],
-    'ghost_element.hover': ['black', 0x0d],
-    'ghost_element.active': ['black', 0x20],
-    'ghost_element.selected': ['black', 0x20],
-    'ghost_element.disabled': 'smoke',
+    'ghost_element.hover': interactive.hover,
+    'ghost_element.active': interactive.active,
+    'ghost_element.selected': interactive.selected,
+    'ghost_element.disabled': interactive.disabled,
 
     // Status
     'conflict': warning.fg, 'conflict.background': warning.bg, 'conflict.border': warning.border,
