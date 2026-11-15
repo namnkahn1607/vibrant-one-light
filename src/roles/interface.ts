@@ -19,6 +19,9 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'background': 'deep_pale',
     'status_bar.background': 'deep_pale',
     'title_bar.background': 'deep_pale',
+    'title_bar.inactive_background': 'medium_pale',
+    'surface.background': 'medium_pale',
+    'elevated_surface.background': 'medium_pale',
     'panel.background': 'medium_pale',
     'tab_bar.background': 'medium_pale',
     'tab.inactive_background': 'medium_pale',
@@ -26,10 +29,21 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'toolbar.background': 'light_pale',
     'editor.background': 'light_pale',
     'editor.gutter.background': 'light_pale',
+    'editor.subheader.background': 'medium_pale',
     'editor.active_line.background': 'soft_pale',
     'editor.highlighted_line.background': 'soft_pale',
     'terminal.background': 'light_pale',
+    'drop_target.background': ['bright_blue', 0x33],
+
+    // Borders
     'border': 'dark_pale',
+    'border.variant': 'soft_pale',
+    'border.focused': 'light_blue',
+    'border.selected': 'soft_blue',
+    'border.transparent': ['transparent', 0x00],
+    'border.disabled': 'fog',
+    'panel.focused_border': KEEP_UPSTREAM,
+    'pane.focused_border': KEEP_UPSTREAM,
 
     // Text & icon
     'text': 'black',
@@ -42,6 +56,22 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'icon.disabled': 'silver',
     'icon.placeholder': 'steel',
     'icon.accent': 'light_blue',
+    'link_text.hover': 'light_blue',
+
+    // Editor gutter & guides
+    'editor.line_number': KEEP_UPSTREAM,
+    'editor.active_line_number': KEEP_UPSTREAM,
+    'editor.hover_line_number': KEEP_UPSTREAM,
+    'editor.invisible': KEEP_UPSTREAM,
+    'editor.wrap_guide': ['black', 0x0d],
+    'editor.active_wrap_guide': ['black', 0x1a],
+
+    // Scrollbar
+    'scrollbar.thumb.background': ['black', 0x70],
+    'scrollbar.thumb.hover_background': ['black', 0x60],
+    'scrollbar.thumb.border': ['transparent', 0x00],
+    'scrollbar.track.background': ['transparent', 0x00],
+    'scrollbar.track.border': ['transparent', 0x00],
 
     // Search & highlights
     'search.active_match_background': ['bright_blue', 0x66],
