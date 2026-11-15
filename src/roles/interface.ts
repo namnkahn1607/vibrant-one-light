@@ -10,9 +10,19 @@ const info = { fg: 'light_blue', bg: 'pale_blue', border: 'soft_blue' } as const
 /** Keys are validated against the upstream JSON at build time (Zed ignores unknown keys silently). */
 export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     // Surfaces
-    'editor.background': 'light_pale',
-    'terminal.background': 'light_pale',
+    'background': 'deep_pale',
+    'status_bar.background': 'deep_pale',
+    'title_bar.background': 'deep_pale',
     'panel.background': 'medium_pale',
+    'tab_bar.background': 'medium_pale',
+    'tab.inactive_background': 'medium_pale',
+    'tab.active_background': 'light_pale',
+    'toolbar.background': 'light_pale',
+    'editor.background': 'light_pale',
+    'editor.gutter.background': 'light_pale',
+    'editor.active_line.background': 'soft_pale',
+    'editor.highlighted_line.background': 'soft_pale',
+    'terminal.background': 'light_pale',
     'border': 'dark_pale',
 
     // Text & icon
@@ -26,6 +36,12 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'icon.disabled': 'silver',
     'icon.placeholder': 'steel',
     'icon.accent': 'light_blue',
+
+    // Search & highlights
+    'search.active_match_background': ['bright_blue', 0x66],
+    'search.match_background': ['bright_blue', 0x33],
+    'editor.document_highlight.read_background': ['bright_blue', 0x33],
+    'editor.document_highlight.write_background': ['bright_blue', 0x33],
 
     // Ghost elements
     'ghost_element.background': ['transparent', 0x00],
@@ -48,7 +64,7 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'modified': info.fg, 'modified.background': info.bg, 'modified.border': info.border,
     'renamed': info.fg, 'renamed.background': info.bg, 'renamed.border': info.border,
 
-    'hint': 'dusty_blue', 'hint.background': 'pale_blue', 'hint.border': 'soft_blue',
+    'hint': 'steel', 'hint.background': 'mist', 'hint.border': 'fog',
     'predictive': 'faded_blue', 'predictive.background': 'pale_lime', 'predictive.border': 'soft_lime',
 
     'hidden': 'silver', 'hidden.background': 'mist', 'hidden.border': 'fog',
