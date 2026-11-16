@@ -3,7 +3,7 @@ import { dirname } from 'node:path';
 import { BuildTheme, type ZedThemeFamily } from './theme';
 
 const UPSTREAM = 'upstream/one-light.json';
-const OUT = 'themes/atom-one-light.json';
+const OUT = 'themes/vibrant-one-light.json';
 
 const upstream = JSON.parse(readFileSync(UPSTREAM, 'utf8')) as ZedThemeFamily;
 const { theme, untouchedChrome } = BuildTheme(upstream);
