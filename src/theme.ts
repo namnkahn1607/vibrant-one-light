@@ -39,9 +39,9 @@ export interface BuildResult {
 export function BuildTheme(upstream: ZedThemeFamily): BuildResult {
     const theme = structuredClone(upstream);
     if (theme.themes.length !== 1) throw new Error(`expected exactly 1 variant, got ${theme.themes.length}`);
-    theme.name = 'Atom One Light';
+    theme.name = 'Vibrant';
     theme.author = 'namnkahn1607';
-    theme.themes[0]!.name = 'Atom One Light';
+    theme.themes[0]!.name = 'Vibrant One Light';
     const style = theme.themes[0]!.style;
 
     // 1. chrome: every key has exactly one owner
