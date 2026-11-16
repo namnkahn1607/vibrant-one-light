@@ -2,10 +2,12 @@ import { KEEP_UPSTREAM, resolve, toZed, type KeepUpstream } from './color';
 import { base } from './palette/base';
 import { interfacePalette } from './palette/interface';
 import { syntaxPalette } from './palette/syntax';
+import { terminalPalette } from './palette/terminal';
 import { CAPTURES } from './roles/captures';
 import { interfaceRoles } from './roles/interface';
 import { playerHues, SELECTION_ALPHA } from './roles/players';
 import { syntaxOwnedChrome, syntaxRoles } from './roles/syntax';
+import { terminalRoles } from './roles/terminal';
 
 interface ZedSyntaxStyle {
     color: string | null;
@@ -54,6 +56,9 @@ export function BuildTheme(upstream: ZedThemeFamily): BuildResult {
     }
     for (const [key, hue] of Object.entries(syntaxOwnedChrome)) {
         own(key, hue === KEEP_UPSTREAM ? KEEP_UPSTREAM : resolve(syntaxPalette, hue), 'syntax');
+    }
+    for (const [key, b] of Object.entries(terminalRoles)) {
+        own(key, b === KEEP_UPSTREAM ? KEEP_UPSTREAM : resolve(terminalPalette, b), 'terminal');
     }
     for (const [key, value] of chrome) {
         if (value !== KEEP_UPSTREAM) style[key] = value;

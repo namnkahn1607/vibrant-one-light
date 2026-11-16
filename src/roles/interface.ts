@@ -32,7 +32,6 @@ export const interfaceRoles: Readonly<Record<string, B | KeepUpstream>> = {
     'editor.subheader.background': 'medium_pale',
     'editor.active_line.background': 'soft_pale',
     'editor.highlighted_line.background': 'soft_pale',
-    'terminal.background': 'light_pale',
     'drop_target.background': ['bright_blue', 0x33],
 
     // Borders
