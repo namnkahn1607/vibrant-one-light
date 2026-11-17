@@ -8,10 +8,10 @@
 ## Usage
 
 > [!Note]
-> For a couple of reasons, I did not registered this as a Zed Extension!
+> For a couple of reasons, I did not register this as a Zed Extension!
 
-1. Move your Shell's CWD to Zed local theme directory, which is `~/.config/zed/themes` on MacOS and Linux
-   or `%USERPROFILE%\AppData\Roaming\Zed\themes\` on Windows. If the directory doesn't exist, create it yourself.
+1. Move your cwd to Zed local theme directory (`~/.config/zed/themes` on MacOS and Linux or
+   `%USERPROFILE%\AppData\Roaming\Zed\themes\` on Windows). If the directory doesn't exist, create it yourself.
 2. Directly fetch the theme configuration file from this repository:
 ```bash
 curl -sSL https://raw.githubusercontent.com/namnkahn1607/vibrant-one-light/main/themes/vibrant-one-light.json
