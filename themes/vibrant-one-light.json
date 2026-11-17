@@ -218,12 +218,12 @@
             "font_weight": null
           },
           "emphasis": {
-            "color": "#383a42ff",
+            "color": "#a626a4ff",
             "font_style": "italic",
             "font_weight": null
           },
           "emphasis.strong": {
-            "color": "#383a42ff",
+            "color": "#df8e1dff",
             "font_style": null,
             "font_weight": null
           },

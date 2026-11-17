@@ -60,8 +60,8 @@ export const syntaxRoles: Record<Capture, SyntaxRole> = {
     // Markup & tags
     'tag': { hue: 'blue' },
     'title': { hue: 'coral' },
-    'emphasis': { hue: 'black', fontStyle: 'italic' },
-    'emphasis.strong': { hue: 'black' },
+    'emphasis': { hue: 'purple', fontStyle: 'italic' },
+    'emphasis.strong': { hue: 'amber' },
     'link_text': { hue: 'blue' },
     'link_uri': { hue: 'cyan' },
     'selector': { hue: 'green' },
